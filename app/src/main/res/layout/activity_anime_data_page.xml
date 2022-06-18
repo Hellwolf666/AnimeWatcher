@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#51289e"
+    android:padding="10dp"
+    tools:context=".Activity.AnimeDataPage">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="casual"
+        android:text="title"
+        android:textColor="@color/white"
+        android:textSize="35sp" />
+
+    <LinearLayout
+        android:id="@+id/img_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            tools:srcCompat="@tools:sample/avatars" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_lay"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="desc"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="italic"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/episodeRecyclerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/desc"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"/>
+
+
+</RelativeLayout>
